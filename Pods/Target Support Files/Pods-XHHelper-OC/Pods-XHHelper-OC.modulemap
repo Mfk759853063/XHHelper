@@ -1,0 +1,6 @@
+framework module Pods_XHHelper_OC {
+  umbrella header "Pods-XHHelper-OC-umbrella.h"
+
+  export *
+  module * { export * }
+}

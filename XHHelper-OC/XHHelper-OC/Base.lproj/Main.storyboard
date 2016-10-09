@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VEp-xX-Wrj">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--看点助手-->
+        <scene sceneID="eFG-hc-1r1">
+            <objects>
+                <viewController id="5De-I1-ISr" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FbT-sW-PNH"/>
+                        <viewControllerLayoutGuide type="bottom" id="var-yZ-ovJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oZY-tm-h9u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="油目前点位" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOp-Ua-OQS">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="银目前点位" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6Z-3D-rLe">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbp-VF-f0s">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CE8-AE-bpF">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRl-RT-gf6">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="X49-Ig-hrZ"/>
+                                </constraints>
+                                <state key="normal" title="查看油历史点位"/>
+                                <connections>
+                                    <action selector="pushOilList:" destination="5De-I1-ISr" eventType="touchUpInside" id="4Qe-Nz-9MD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXS-vl-dJD">
+                                <state key="normal" title="查看银历史点位"/>
+                                <connections>
+                                    <action selector="pushAgList:" destination="5De-I1-ISr" eventType="touchUpInside" id="7NE-qS-m7D"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wPl-mM-S00">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目标点位提醒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQz-c1-EI3">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zug-00-eGl">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目标点位提醒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9t-Ub-m4L">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CXs-4z-x0J">
+                                <connections>
+                                    <action selector="oilEnableChanged:" destination="5De-I1-ISr" eventType="valueChanged" id="Bml-eK-qBW"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Eo1-eT-PFs">
+                                <connections>
+                                    <action selector="agEnableChanged:" destination="5De-I1-ISr" eventType="valueChanged" id="SRK-oq-S8e"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="D6Z-3D-rLe" secondAttribute="trailing" constant="20" id="106-KN-ciE"/>
+                            <constraint firstItem="zRl-RT-gf6" firstAttribute="leading" secondItem="NOp-Ua-OQS" secondAttribute="leading" id="1qg-n6-iGW"/>
+                            <constraint firstItem="NOp-Ua-OQS" firstAttribute="top" secondItem="FbT-sW-PNH" secondAttribute="bottom" constant="30" id="2rF-pL-Nqa"/>
+                            <constraint firstItem="EXS-vl-dJD" firstAttribute="centerY" secondItem="zRl-RT-gf6" secondAttribute="centerY" id="AI3-gt-NJP"/>
+                            <constraint firstItem="CXs-4z-x0J" firstAttribute="centerX" secondItem="wPl-mM-S00" secondAttribute="centerX" id="AgU-3h-zBM"/>
+                            <constraint firstItem="D6Z-3D-rLe" firstAttribute="centerY" secondItem="NOp-Ua-OQS" secondAttribute="centerY" id="CQO-v2-gCh"/>
+                            <constraint firstItem="t9t-Ub-m4L" firstAttribute="centerY" secondItem="uQz-c1-EI3" secondAttribute="centerY" id="CmI-j6-wrI"/>
+                            <constraint firstItem="EXS-vl-dJD" firstAttribute="height" secondItem="zRl-RT-gf6" secondAttribute="height" id="ELc-h2-LhC"/>
+                            <constraint firstItem="CXs-4z-x0J" firstAttribute="top" secondItem="wPl-mM-S00" secondAttribute="bottom" constant="10" id="FCj-1B-LlU"/>
+                            <constraint firstItem="CE8-AE-bpF" firstAttribute="height" secondItem="Pbp-VF-f0s" secondAttribute="height" id="GVq-rJ-7SV"/>
+                            <constraint firstItem="CE8-AE-bpF" firstAttribute="centerY" secondItem="Pbp-VF-f0s" secondAttribute="centerY" id="GaT-0P-9Yd"/>
+                            <constraint firstItem="D6Z-3D-rLe" firstAttribute="width" secondItem="NOp-Ua-OQS" secondAttribute="width" id="HLY-qy-sQd"/>
+                            <constraint firstItem="uQz-c1-EI3" firstAttribute="top" secondItem="zRl-RT-gf6" secondAttribute="bottom" constant="10" id="IzF-nk-mZS"/>
+                            <constraint firstItem="Pbp-VF-f0s" firstAttribute="width" secondItem="NOp-Ua-OQS" secondAttribute="width" id="JAn-A8-J1f"/>
+                            <constraint firstItem="EXS-vl-dJD" firstAttribute="width" secondItem="zRl-RT-gf6" secondAttribute="width" id="JPL-U0-bvr"/>
+                            <constraint firstItem="zRl-RT-gf6" firstAttribute="top" secondItem="Pbp-VF-f0s" secondAttribute="bottom" constant="8" id="LxS-Vw-OQi"/>
+                            <constraint firstItem="D6Z-3D-rLe" firstAttribute="height" secondItem="NOp-Ua-OQS" secondAttribute="height" id="Miy-ww-mst"/>
+                            <constraint firstItem="Pbp-VF-f0s" firstAttribute="leading" secondItem="NOp-Ua-OQS" secondAttribute="leading" id="Mou-EP-OWL"/>
+                            <constraint firstItem="Zug-00-eGl" firstAttribute="leading" secondItem="wPl-mM-S00" secondAttribute="trailing" constant="5" id="Og2-zn-vdU"/>
+                            <constraint firstItem="EXS-vl-dJD" firstAttribute="leading" secondItem="zRl-RT-gf6" secondAttribute="trailing" constant="5" id="Xj3-uF-J3c"/>
+                            <constraint firstItem="uQz-c1-EI3" firstAttribute="centerX" secondItem="NOp-Ua-OQS" secondAttribute="centerX" id="ZWi-yP-6ks"/>
+                            <constraint firstItem="D6Z-3D-rLe" firstAttribute="leading" secondItem="NOp-Ua-OQS" secondAttribute="trailing" constant="5" id="aYT-h7-bJh"/>
+                            <constraint firstItem="EXS-vl-dJD" firstAttribute="trailing" secondItem="D6Z-3D-rLe" secondAttribute="trailing" id="auY-uE-13c"/>
+                            <constraint firstItem="wPl-mM-S00" firstAttribute="leading" secondItem="NOp-Ua-OQS" secondAttribute="leading" id="cqH-L1-D2L"/>
+                            <constraint firstItem="Zug-00-eGl" firstAttribute="height" secondItem="wPl-mM-S00" secondAttribute="height" id="dNc-hV-Ydn"/>
+                            <constraint firstItem="Pbp-VF-f0s" firstAttribute="top" secondItem="NOp-Ua-OQS" secondAttribute="bottom" constant="14" id="gTe-QS-Fi1"/>
+                            <constraint firstItem="Zug-00-eGl" firstAttribute="width" secondItem="wPl-mM-S00" secondAttribute="width" id="hEc-GW-geu"/>
+                            <constraint firstItem="Zug-00-eGl" firstAttribute="trailing" secondItem="D6Z-3D-rLe" secondAttribute="trailing" id="hgb-fh-KiH"/>
+                            <constraint firstItem="Eo1-eT-PFs" firstAttribute="centerX" secondItem="Zug-00-eGl" secondAttribute="centerX" id="iQQ-Kw-pue"/>
+                            <constraint firstItem="CE8-AE-bpF" firstAttribute="leading" secondItem="Pbp-VF-f0s" secondAttribute="trailing" constant="5" id="jPZ-1f-4py"/>
+                            <constraint firstItem="t9t-Ub-m4L" firstAttribute="centerX" secondItem="D6Z-3D-rLe" secondAttribute="centerX" id="jQi-G0-XRd"/>
+                            <constraint firstItem="CE8-AE-bpF" firstAttribute="width" secondItem="Pbp-VF-f0s" secondAttribute="width" id="msn-6Q-1cm"/>
+                            <constraint firstItem="Zug-00-eGl" firstAttribute="top" secondItem="t9t-Ub-m4L" secondAttribute="bottom" constant="11" id="pXW-AM-xMr"/>
+                            <constraint firstItem="NOp-Ua-OQS" firstAttribute="leading" secondItem="oZY-tm-h9u" secondAttribute="leading" constant="20" id="s7j-01-PoT"/>
+                            <constraint firstItem="Eo1-eT-PFs" firstAttribute="top" secondItem="Zug-00-eGl" secondAttribute="bottom" constant="12" id="tbD-Fk-XlJ"/>
+                            <constraint firstItem="wPl-mM-S00" firstAttribute="top" secondItem="uQz-c1-EI3" secondAttribute="bottom" constant="10" id="uBh-hy-aQg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="看点助手" id="LY3-lO-YA9"/>
+                    <connections>
+                        <outlet property="agCurrentPriceLabel" destination="CE8-AE-bpF" id="bGp-zl-ZhV"/>
+                        <outlet property="agNotificationSwicher" destination="Eo1-eT-PFs" id="8pr-Te-cDX"/>
+                        <outlet property="agTargetTextField" destination="Zug-00-eGl" id="fES-eZ-aaZ"/>
+                        <outlet property="oilCurrentPriceLabel" destination="Pbp-VF-f0s" id="n6q-pD-8lW"/>
+                        <outlet property="oilNotificationSwicher" destination="CXs-4z-x0J" id="EvB-GU-kzd"/>
+                        <outlet property="oilTargetTextField" destination="wPl-mM-S00" id="Z28-mD-q6T"/>
+                        <outlet property="view" destination="oZY-tm-h9u" id="8n0-O1-Mxx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ln6-40-ml3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1358" y="167"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VZx-50-A6y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VEp-xX-Wrj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sVm-Cq-D70">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5De-I1-ISr" kind="relationship" relationship="rootViewController" id="dEp-bb-jOL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B1D-S9-DmI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="72.799999999999997" y="222.63868065967017"/>
+        </scene>
+    </scenes>
+</document>
