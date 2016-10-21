@@ -41,14 +41,16 @@
     [service setFetchDataCallback:^(XHPriceModel *price,NSError *error) {
         if (!error) {
             self.currentPrice = price;
-            if (self.oilCanNotification && self.currentPrice.oilPrice == [self.oilTargetTextField.text floatValue]) {
+            CGFloat oilDiff = fabs(self.currentPrice.oilPrice - [self.oilTargetTextField.text floatValue]);
+            CGFloat agDiff = fabs(self.currentPrice.agPrice - [self.agTargetTextField.text floatValue]);
+            if (self.oilCanNotification && oilDiff <= 0.2) {
                 NSString *message = [NSString stringWithFormat:@"油已到达目标点位%@",self.oilTargetTextField.text];
                 [XHHelper sendLocalNotificationWithMessage:message date:[NSDate date]];
                 self.oilCanNotification = NO;
                 self.oilTargetTextField.enabled = YES;
                 [self.oilNotificationSwicher setOn:NO];
             }
-            if (self.agCanNotification && self.currentPrice.agPrice == [self.agTargetTextField.text floatValue]) {
+            if (self.agCanNotification && agDiff <= 0.002) {
                 NSString *message = [NSString stringWithFormat:@"银已到达目标点位%@",self.agTargetTextField.text];
                 [XHHelper sendLocalNotificationWithMessage:message date:[NSDate date]];
                 self.agCanNotification = NO;
@@ -75,7 +77,7 @@
         self.oilCurrentPriceLabel.textColor = color;
     }
     
-    self.agCurrentPriceLabel.text = [NSString stringWithFormat:@"%.2f",self.currentPrice.agPrice];
+    self.agCurrentPriceLabel.text = [NSString stringWithFormat:@"%.3f",self.currentPrice.agPrice];
     color = [self.currentPrice getCurrentAgColor];
     if (color) {
         self.agCurrentPriceLabel.textColor = color;
@@ -86,10 +88,10 @@
     [self.view endEditing:YES];
     if (sender.isEnabled && [self.oilTargetTextField.text floatValue] != 0) {
         self.oilCanNotification = YES;
-        self.oilTargetTextField.enabled = NO;
+//        self.oilTargetTextField.enabled = NO;
     } else {
         self.oilCanNotification = NO;
-        self.oilTargetTextField.enabled = YES;
+//        self.oilTargetTextField.enabled = YES;
         [XHHelper removeAllLocalNotifications];
         [sender setOn:NO];
     }
@@ -99,10 +101,10 @@
     [self.view endEditing:YES];
     if (sender.isEnabled && [self.agTargetTextField.text floatValue] != 0) {
         self.agCanNotification = YES;
-        self.agTargetTextField.enabled = NO;
+//        self.agTargetTextField.enabled = NO;
     } else {
         self.agCanNotification = NO;
-        self.agTargetTextField.enabled = YES;
+//        self.agTargetTextField.enabled = YES;
         [XHHelper removeAllLocalNotifications];
         [sender setOn:NO];
     }

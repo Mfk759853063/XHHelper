@@ -51,7 +51,7 @@
         cell.textLabel.text = [NSString stringWithFormat:@"%.2f",price.oilPrice];
         cell.textLabel.textColor = [price getCurrentOilColor];
     } else if (self.type == 2) {
-        cell.textLabel.text = [NSString stringWithFormat:@"%.2f",price.agPrice];
+        cell.textLabel.text = [NSString stringWithFormat:@"%.3f",price.agPrice];
         cell.textLabel.textColor = [price getCurrentAgColor];
     }
     
