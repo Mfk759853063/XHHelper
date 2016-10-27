@@ -18,7 +18,8 @@ default_platform :ios
 platform :ios do
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-    #cocoapods
+    cocoapods
+
     
   end
 
@@ -27,7 +28,7 @@ platform :ios do
     scan
   end
 
-  lane :adhoc do
+  lane :adhoc do 
   say "create adhoc ipa....."
   gym()
   end
