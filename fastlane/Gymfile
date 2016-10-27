@@ -1,0 +1,8 @@
+scheme "XHHelper-OC"
+
+#sdk "iphoneos9.0"
+
+clean true
+export_method "ad-hoc"
+output_directory "./build"    # store the ipa in this folder
+output_name "XHHelper-OC"           # the name of the ipa file
