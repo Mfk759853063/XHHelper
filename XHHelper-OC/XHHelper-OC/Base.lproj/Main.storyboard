@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VEp-xX-Wrj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VEp-xX-Wrj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,26 +22,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="油目前点位" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOp-Ua-OQS">
+                                <rect key="frame" x="20" y="94" width="165" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="银目前点位" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6Z-3D-rLe">
+                                <rect key="frame" x="190" y="94" width="165" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbp-VF-f0s">
+                                <rect key="frame" x="20" y="128.5" width="165" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CE8-AE-bpF">
+                                <rect key="frame" x="190" y="128.5" width="165" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRl-RT-gf6">
+                                <rect key="frame" x="20" y="157" width="165" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="X49-Ig-hrZ"/>
                                 </constraints>
@@ -48,47 +56,59 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXS-vl-dJD">
+                                <rect key="frame" x="190" y="157" width="165" height="40"/>
                                 <state key="normal" title="查看银历史点位"/>
                                 <connections>
                                     <action selector="pushAgList:" destination="5De-I1-ISr" eventType="touchUpInside" id="7NE-qS-m7D"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wPl-mM-S00">
+                                <rect key="frame" x="20" y="237.5" width="165" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目标点位提醒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQz-c1-EI3">
+                                <rect key="frame" x="50.5" y="207" width="104" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zug-00-eGl">
+                                <rect key="frame" x="190" y="238.5" width="165" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目标点位提醒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9t-Ub-m4L">
+                                <rect key="frame" x="220.5" y="207" width="104" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CXs-4z-x0J">
+                                <rect key="frame" x="78" y="277.5" width="51" height="31"/>
                                 <connections>
                                     <action selector="oilEnableChanged:" destination="5De-I1-ISr" eventType="valueChanged" id="Bml-eK-qBW"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Eo1-eT-PFs">
+                                <rect key="frame" x="248" y="280.5" width="51" height="31"/>
                                 <connections>
                                     <action selector="agEnableChanged:" destination="5De-I1-ISr" eventType="valueChanged" id="SRK-oq-S8e"/>
                                 </connections>
                             </switch>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0oX-xX-alc">
+                                <rect key="frame" x="0.0" y="316" width="375" height="351"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="D6Z-3D-rLe" secondAttribute="trailing" constant="20" id="106-KN-ciE"/>
                             <constraint firstItem="zRl-RT-gf6" firstAttribute="leading" secondItem="NOp-Ua-OQS" secondAttribute="leading" id="1qg-n6-iGW"/>
                             <constraint firstItem="NOp-Ua-OQS" firstAttribute="top" secondItem="FbT-sW-PNH" secondAttribute="bottom" constant="30" id="2rF-pL-Nqa"/>
+                            <constraint firstItem="0oX-xX-alc" firstAttribute="leading" secondItem="oZY-tm-h9u" secondAttribute="leading" id="9f6-3j-4l4"/>
                             <constraint firstItem="EXS-vl-dJD" firstAttribute="centerY" secondItem="zRl-RT-gf6" secondAttribute="centerY" id="AI3-gt-NJP"/>
                             <constraint firstItem="CXs-4z-x0J" firstAttribute="centerX" secondItem="wPl-mM-S00" secondAttribute="centerX" id="AgU-3h-zBM"/>
                             <constraint firstItem="D6Z-3D-rLe" firstAttribute="centerY" secondItem="NOp-Ua-OQS" secondAttribute="centerY" id="CQO-v2-gCh"/>
@@ -105,6 +125,8 @@
                             <constraint firstItem="D6Z-3D-rLe" firstAttribute="height" secondItem="NOp-Ua-OQS" secondAttribute="height" id="Miy-ww-mst"/>
                             <constraint firstItem="Pbp-VF-f0s" firstAttribute="leading" secondItem="NOp-Ua-OQS" secondAttribute="leading" id="Mou-EP-OWL"/>
                             <constraint firstItem="Zug-00-eGl" firstAttribute="leading" secondItem="wPl-mM-S00" secondAttribute="trailing" constant="5" id="Og2-zn-vdU"/>
+                            <constraint firstItem="var-yZ-ovJ" firstAttribute="top" secondItem="0oX-xX-alc" secondAttribute="bottom" id="Ruw-nX-ZPl"/>
+                            <constraint firstAttribute="trailing" secondItem="0oX-xX-alc" secondAttribute="trailing" id="TG4-Zd-EIe"/>
                             <constraint firstItem="EXS-vl-dJD" firstAttribute="leading" secondItem="zRl-RT-gf6" secondAttribute="trailing" constant="5" id="Xj3-uF-J3c"/>
                             <constraint firstItem="uQz-c1-EI3" firstAttribute="centerX" secondItem="NOp-Ua-OQS" secondAttribute="centerX" id="ZWi-yP-6ks"/>
                             <constraint firstItem="D6Z-3D-rLe" firstAttribute="leading" secondItem="NOp-Ua-OQS" secondAttribute="trailing" constant="5" id="aYT-h7-bJh"/>
@@ -120,6 +142,7 @@
                             <constraint firstItem="CE8-AE-bpF" firstAttribute="width" secondItem="Pbp-VF-f0s" secondAttribute="width" id="msn-6Q-1cm"/>
                             <constraint firstItem="Zug-00-eGl" firstAttribute="top" secondItem="t9t-Ub-m4L" secondAttribute="bottom" constant="11" id="pXW-AM-xMr"/>
                             <constraint firstItem="NOp-Ua-OQS" firstAttribute="leading" secondItem="oZY-tm-h9u" secondAttribute="leading" constant="20" id="s7j-01-PoT"/>
+                            <constraint firstItem="0oX-xX-alc" firstAttribute="top" secondItem="Eo1-eT-PFs" secondAttribute="bottom" constant="4.5" id="sVF-MM-EJN"/>
                             <constraint firstItem="Eo1-eT-PFs" firstAttribute="top" secondItem="Zug-00-eGl" secondAttribute="bottom" constant="12" id="tbD-Fk-XlJ"/>
                             <constraint firstItem="wPl-mM-S00" firstAttribute="top" secondItem="uQz-c1-EI3" secondAttribute="bottom" constant="10" id="uBh-hy-aQg"/>
                         </constraints>
@@ -133,11 +156,12 @@
                         <outlet property="oilNotificationSwicher" destination="CXs-4z-x0J" id="EvB-GU-kzd"/>
                         <outlet property="oilTargetTextField" destination="wPl-mM-S00" id="Z28-mD-q6T"/>
                         <outlet property="view" destination="oZY-tm-h9u" id="8n0-O1-Mxx"/>
+                        <outlet property="webView" destination="0oX-xX-alc" id="CaV-Zp-am5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ln6-40-ml3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1358" y="167"/>
+            <point key="canvasLocation" x="1357.5999999999999" y="166.8665667166417"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VZx-50-A6y">

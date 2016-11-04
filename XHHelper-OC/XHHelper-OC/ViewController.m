@@ -23,6 +23,11 @@
 
 @property (strong, nonatomic) XHListTableViewController *listVC;
 
+// 首页url
+@property (strong, nonatomic) NSURL *indexUrl;
+
+@property (strong, nonatomic) NSURL *loginUrl;
+
 @end
 
 @implementation ViewController
@@ -35,6 +40,8 @@
 
 - (void)setup {
     
+    self.loginUrl = [NSURL URLWithString:@"http://wp.bsbce.com/login_and.php?password=0c909a141f1f2c0a1cb602b0b2d7d050&mobile=35566543706&sign=440c3b774a8aac838022d8e4d59ce287"];
+    self.indexUrl = [NSURL URLWithString:@"http://wp.bsbce.com/index.php"];
     self.priceList = @[].mutableCopy;
     
     XHPricePullService *service = [[XHPricePullService alloc] init];
@@ -68,6 +75,12 @@
         }
     }];
     [service startService];
+    
+    [self loadWebViewWithRequest:self.loginUrl];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self loadWebViewWithRequest:self.indexUrl];
+    });
+
 }
 
 - (void)renderUI {
@@ -122,6 +135,11 @@
     self.listVC.type =  2;
     self.listVC.list = self.priceList;
     [self.navigationController pushViewController:self.listVC animated:YES];
+}
+
+- (void)loadWebViewWithRequest:(NSURL *)url {
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    [self.webView loadRequest:request];
 }
 
 #pragma mark - setter

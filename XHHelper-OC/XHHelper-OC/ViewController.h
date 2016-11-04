@@ -22,6 +22,7 @@
 
 @property (weak, nonatomic) IBOutlet UISwitch *agNotificationSwicher;
 
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 - (IBAction)oilEnableChanged:(id)sender;
 
